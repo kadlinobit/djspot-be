@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "djs",
+  "info": {
+    "name": "dj",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "user": {
+      "via": "dj",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "genres": {
+      "collection": "genre"
+    }
+  }
+}

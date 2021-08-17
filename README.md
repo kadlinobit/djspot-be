@@ -1,3 +1,3 @@
-# Strapi application
+# DJ Spot - Backend
 
-A quick description of your strapi application
+No description yet, but it's coming!
