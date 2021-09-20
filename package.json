@@ -13,7 +13,10 @@
     "strapi-provider-email-console": "0.0.1"
   },
   "dependencies": {
+    "@googleapis/drive": "^0.3.1",
+    "dropbox": "^10.7.0",
     "knex": "0.21.18",
+    "lodash": "^4.17.21",
     "sqlite3": "5.0.0",
     "strapi": "3.6.5",
     "strapi-admin": "3.6.5",
