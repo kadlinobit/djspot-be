@@ -24,9 +24,9 @@ module.exports = {
             })
 
             if (!dj) {
-                return ctx.unauthorized(`You can't add mix for this DJ.`)
+                return ctx.unauthorized(`You can't add sound for this DJ.`)
             }
-            entity = await strapi.services.mix.create(data, { files })
+            entity = await strapi.services.sound.create(data, { files })
         } else {
 
             const [dj] = await strapi.services.dj.find({ 
@@ -35,10 +35,10 @@ module.exports = {
             })
 
             if (!dj) {
-                return ctx.unauthorized(`You can't add mix for this DJ.`)
+                return ctx.unauthorized(`You can't add sound for this DJ.`)
             }
-            entity = await strapi.services.mix.create(ctx.request.body)
+            entity = await strapi.services.sound.create(ctx.request.body)
         }
-        return sanitizeEntity(entity, { model: strapi.models.mix })
+        return sanitizeEntity(entity, { model: strapi.models.sound })
       },
 };

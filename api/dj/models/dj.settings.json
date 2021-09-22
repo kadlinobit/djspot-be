@@ -50,9 +50,9 @@
     "genres": {
       "collection": "genre"
     },
-    "mixes": {
+    "sounds": {
       "via": "dj",
-      "collection": "mix"
+      "collection": "sound"
     }
   }
 }

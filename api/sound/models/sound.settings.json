@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "mixes",
+  "collectionName": "sounds",
   "info": {
-    "name": "mix",
+    "name": "sound",
     "description": ""
   },
   "options": {
@@ -21,15 +21,24 @@
     },
     "url": {
       "type": "string",
-      "unique": true,
       "required": true
     },
     "dj": {
       "model": "dj",
-      "via": "mixes"
+      "via": "sounds"
     },
     "genres": {
       "collection": "genre"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mix",
+        "track",
+        "podcast"
+      ],
+      "required": true,
+      "default": "mix"
     }
   }
 }

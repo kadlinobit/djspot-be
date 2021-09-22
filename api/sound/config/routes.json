@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/mixes",
-      "handler": "mix.find",
+      "path": "/sounds",
+      "handler": "sound.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/mixes/count",
-      "handler": "mix.count",
+      "path": "/sounds/count",
+      "handler": "sound.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/mixes/:id",
-      "handler": "mix.findOne",
+      "path": "/sounds/:id",
+      "handler": "sound.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/mixes",
-      "handler": "mix.create",
+      "path": "/sounds",
+      "handler": "sound.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/mixes/:id",
-      "handler": "mix.update",
+      "path": "/sounds/:id",
+      "handler": "sound.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/mixes/:id",
-      "handler": "mix.delete",
+      "path": "/sounds/:id",
+      "handler": "sound.delete",
       "config": {
         "policies": []
       }
