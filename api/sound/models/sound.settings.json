@@ -39,6 +39,9 @@
       ],
       "required": true,
       "default": "mix"
+    },
+    "duration": {
+      "type": "integer"
     }
   }
 }
