@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
 module.exports = {
-  /**
-   * Promise to fetch authenticated user.
-   * @return {Promise}
-   */
-  fetchAuthenticatedUser(id) {
-    return strapi.query('user', 'users-permissions').findOne({ id }, ['role', 'dj']); // added DJ
-  },
-};
+    /**
+     * Promise to fetch authenticated user.
+     * @return {Promise}
+     */
+    fetchAuthenticatedUser(id) {
+        return strapi.query('user', 'users-permissions').findOne({ id }, ['role', 'dj']) // added DJ
+    }
+}
