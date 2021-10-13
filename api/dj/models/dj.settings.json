@@ -53,6 +53,10 @@
     "sounds": {
       "via": "dj",
       "collection": "sound"
+    },
+    "follows": {
+      "via": "dj",
+      "collection": "follow"
     }
   }
 }
