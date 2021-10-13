@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/likes",
+      "handler": "like.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/likes",
+      "handler": "like.toggle",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
