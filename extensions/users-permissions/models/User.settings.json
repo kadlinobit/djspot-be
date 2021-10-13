@@ -62,7 +62,15 @@
     "dj": {
       "via": "user",
       "model": "dj",
-      "autoPopulate" : true
+      "autoPopulate": true
+    },
+    "likes": {
+      "via": "user",
+      "collection": "like"
+    },
+    "follows": {
+      "via": "user",
+      "collection": "follow"
     }
   }
 }

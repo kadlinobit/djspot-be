@@ -42,6 +42,20 @@
     },
     "duration": {
       "type": "integer"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "likes": {
+      "via": "sound",
+      "collection": "like"
     }
   }
 }

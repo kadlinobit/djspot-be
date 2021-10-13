@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/sounds/toggleLike",
+      "handler": "sound.toggleLike",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
