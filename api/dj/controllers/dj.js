@@ -65,31 +65,31 @@ module.exports = {
     return sanitizeEntity(entity, { model: strapi.models.dj })
   },
 
-    /**
-     * Delete a record.
-     *
-     * @return {Object}
-     */
-  
-    async delete(ctx) {
-      const { id } = ctx.params;
-  
-      const [dj] = await strapi.services.dj.find({
-        id: ctx.params.id,
-        'user.id': ctx.state.user.id,
-      })
+  /**
+   * Delete a record.
+   *
+   * @return {Object}
+   */
 
-      if (!dj) {
-        return ctx.unauthorized(`You can't update this entry`)
-      }
+  async delete(ctx) {
+    const { id } = ctx.params;
 
-      // Remove DJ photo from uploads
-      if(dj.photo) {
-        await strapi.plugins.upload.services.upload.remove(dj.photo)
-      }
+    const [dj] = await strapi.services.dj.find({
+      id: ctx.params.id,
+      'user.id': ctx.state.user.id,
+    })
 
-      const entity = await strapi.services.dj.delete({ id });
-      return sanitizeEntity(entity, { model: strapi.models.dj });
-    },
+    if (!dj) {
+      return ctx.unauthorized(`You can't update this entry`)
+    }
+
+    // Remove DJ photo from uploads
+    if(dj.photo) {
+      await strapi.plugins.upload.services.upload.remove(dj.photo)
+    }
+
+    const entity = await strapi.services.dj.delete({ id });
+    return sanitizeEntity(entity, { model: strapi.models.dj });
+  },
 }
 
